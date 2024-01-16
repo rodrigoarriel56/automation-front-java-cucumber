@@ -12,5 +12,5 @@ Funcionalidade: Adicionar Produto
 
   @execute @chrome-same-session @generate-word @produto
   Esquema do Cenario: CT - ADICIONAR PRODUTO - Adicionar produto no carrinho com Sucesso.
-    Quando clico no produto desejdo
+    Quando clico no produto desejado
     Então produto devera ser adicionado no carrinho com sucesso

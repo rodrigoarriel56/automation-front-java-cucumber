@@ -32,6 +32,10 @@ public class ProdutoPage extends BaseWebPageFactory {
     //Botão Remover
     @FindBy(how = How.ID, using = "remove-sauce-labs-bike-light")
     private WebElement submitBtnRemove;
+    
+  //Validação do texto da pagina de Checkout com suas informações
+    @FindBy(how = How.XPATH, using = "//div[@id='header_container']/div[2]/span")
+    private WebElement validateTextoDescricao;
 
     //Botão Continue Comprando
     @FindBy(how = How.ID, using = "continue-shopping")
@@ -53,13 +57,13 @@ public class ProdutoPage extends BaseWebPageFactory {
     @FindBy(how = How.ID, using = "postal-code")
     private WebElement submitBtnCep;
     
-    //Campo continue na tela do Checkout
+    //Botão Checkout na tela de confirmação do pedido  
     @FindBy(how = How.ID, using = "continue")
-    private WebElement submitBtnContinue;
+    private WebElement btnContinueCheckout;
     
-    //Validação do texto da pagina de checkout
+    //Validação do texto da pagina de Checkout - Overview 
     @FindBy(how = How.XPATH, using = "//div[@id='header_container']/div[2]/span")
-    private WebElement validateMessagemSucess;
+    private WebElement validateOverviewSucess;
 
     public ProdutoPage(WebDriver driver) {
         super(driver);
@@ -95,7 +99,7 @@ public class ProdutoPage extends BaseWebPageFactory {
     	Thread.sleep(2000);
     }
     
-    public void checkout() throws InterruptedException {
+    public void btnCheckout() throws InterruptedException {
     	submitBtncheckout.click();
     	Thread.sleep(2000);
     }
@@ -115,14 +119,19 @@ public class ProdutoPage extends BaseWebPageFactory {
     	Thread.sleep(2000);
     }
     
-    public void submitBtnContinue() throws InterruptedException {
-    	submitBtnContinue.click();
+    public void btnContinueCheckout() throws InterruptedException {
+    	btnContinueCheckout.click();
     	Thread.sleep(2000);
-    }    
+    }
 
-    public String getMessageSucess() throws InterruptedException {
-        waitUntilElementIsVisible(validateMessagemSucess);
-        return validateMessagemSucess.getText();
+    public String getOverview() throws InterruptedException {
+        waitUntilElementIsVisible(validateOverviewSucess);
+        return validateOverviewSucess.getText();
+    }
+    
+    public String getTextoDescricao() throws InterruptedException {
+        waitUntilElementIsVisible(validateTextoDescricao);
+        return validateTextoDescricao.getText();
     }
     
 

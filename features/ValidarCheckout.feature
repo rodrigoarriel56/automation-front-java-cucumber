@@ -10,16 +10,15 @@ Funcionalidade: Validar carrinho
     E que utilizo o word para evidências com as informações de execução
       | Homologação | Adicionar produto no carrinho com Sucesso | Produto no carrinho | Aplicação e-Commerce | e-Commercer Swag Labs | Rodrigo Arriel | 01 | 01 |
 
-  @execute @chrome-same-session @generate-word @validacarrinho
-  Esquema do Cenario: CT - ADICIONAR PRODUTO - Adicionar produto no carrinho com Sucesso.
-    Quando clico no produto desejdo
-    Então produto devera ser adicionado no carrinho com sucesso
-
-  @execute @chrome-same-session @generate-word @validacarrinho
-  Esquema do Cenario: CT - REMOVER PRODUTO DO CARRINHO - Remover produto do carrinho com Sucesso.
-    Quando clico no produto desejdo
-    Então produto devera ser adicionado no carrinho com sucesso
-    Quando clico no carrinho
-    E clico no botão remover produto
-    Então produto devera ser removido do carrinho
+	@execute @chrome-same-session @generate-word @validarcheckout
+  Esquema do Cenario: CT - VALIDAR CHECKOUT - Validar checkout com Sucesso.
+  	E clico no botão checkou
+    Quando preencho campo primeiro nome <PRIMEIRO>
+    E preencho campo segundo nome <SEGUNDO>
+    E preencho campo cep <CEP>
+    Quando clico no botão continue
+    Então tela de detalhes da compra devera ser exibida <MENSAGEM>
     
+  Exemplos:
+      | PRIMEIRO  | SEGUNDO  |    CEP     | MENSAGEM   |
+      | "Rodrigo" | "Arriel" | "01153020" | "Overview" |      

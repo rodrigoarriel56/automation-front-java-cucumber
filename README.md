@@ -1,11 +1,13 @@
-# Framework de Automação FRONT-END #
+
+# Framework de Automação de testes para FRONT-END WEB #
 
 ## Pré-requisitos ##
 
-* Possuir java instalado **> Version 8 **
+* Possuir java instalado **> Version 8 ou superior **
 * https://www.java.com/en/download/
 
-* Possuir Plugin Cucumber para Java 
+* Possuir Plugin Cucumber para Java
+* Possuir Plugin Maven instalado e configurado  
 
 ## Instalações e configurações do ambiente ##
 
@@ -13,9 +15,11 @@
   
     - Acessar o endereço do repositorio do projeto
  
-    - github.com/rodrigoarriel56/automacao-frontend-java
+    - https://github.com/rodrigoarriel56/automation-front-java-cucumber
  	
  ## Segundo passo ##
+		
+		- Para o desenvolvimento do projeto, foi utilizado a IDE Eclipse, mas fica a critério do QA/DEV na escolha da IDE desejada
  
     	- Realizar a importação do projeto clonado para o seu Workspace - (Neste momento será baixado e atualizado as dependências do projeto).
     
@@ -42,3 +46,8 @@
 
 	 As evidências serão geradas na pasta output localizada na raiz do projeto.
 	/output
+
+## BUG encontrado ##
+
+	 As execuções dos testes, foram deparados com alguns BUG's. Os detalhes dos mesmos encontra-se no seguinte diretorio:
+	/BUGs
