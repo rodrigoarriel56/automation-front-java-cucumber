@@ -17,20 +17,17 @@ public class LoginPage extends BaseWebPageFactory {
 
     //Locators
 
-    @FindBy(how = How.ID, using = "email")
-    private WebElement setFieldMail;
+    @FindBy(how = How.ID, using = "user-name")
+    private WebElement setFieldUsername;
 
-    @FindBy(how = How.ID, using = "senha")
+    @FindBy(how = How.ID, using = "password")
     private WebElement setFieldPassword;
 
-    @FindBy(how = How.XPATH, using = "//button[@type='submit' and @class='btn btn-primary']") //arrumar XPATH
+    @FindBy(how = How.ID, using = "login-button")
     private WebElement submitFieldLogin;
-
-    @FindBy(how = How.XPATH, using = "//*[@class='alert alert-success']")
+    
+    @FindBy(how = How.XPATH, using = "(.//*[normalize-space(text()) and normalize-space(.)='Close Menu'])[1]/following::div[2]")
     private WebElement validateMessagemLogin;
-
-    @FindBy(how = How.XPATH, using = "//a[@href='/logout']")
-    private WebElement submitFieldLogout;
 
 
     public LoginPage(WebDriver driver) {
@@ -41,12 +38,12 @@ public class LoginPage extends BaseWebPageFactory {
         driver.navigate().to(pUrl);
     }
 
-    public void setFieldMail(String pEmail) {
-        setFieldMail.sendKeys(pEmail);
+    public void setFieldUser(String user) {
+        setFieldUsername.sendKeys(user);
     }
 
-    public void setFieldPassword(CharSequence pSenha) {
-        setFieldPassword.sendKeys(pSenha);
+    public void setFieldPassword(CharSequence password) {
+        setFieldPassword.sendKeys(password);
     }
 
     public void submitFieldLogin() {
@@ -58,9 +55,5 @@ public class LoginPage extends BaseWebPageFactory {
         return validateMessagemLogin.getText();
     }
 
-    public void submitFieldLogout() throws InterruptedException {
-    	Thread.sleep(2000);
-        submitFieldLogout.click();
-    }
-
-}
+   
+  }

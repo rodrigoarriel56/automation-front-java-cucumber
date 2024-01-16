@@ -17,7 +17,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
         features = {"features"},
         glue = {"stepdefinition"},
-        tags = {"@execute"},
+        tags = {"@login"},
         monochrome= true,
         plugin = {"pretty", "html:Reports/cucumber"})
 public class RunnerTest {
