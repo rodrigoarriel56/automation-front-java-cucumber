@@ -26,6 +26,15 @@
  ## Pronto projeto instalado e configurado na maquina
 
 ## Executando o projeto ##
+	
+		- Para a execução dos testes, temos duas possibilidade: 
+			
+			1º - Caso o executor não tenha nenhuma IDE de desenvolvmento em sua maquina, o mesmo pode acessar o diretorio do projeto e executar o seguinte comando:
+				 - mvn install 
+				  - mvn run 
+			
+			2º - Para a execução utilizando uma IDE, o executor deverá olhar a classe "runner" nela contem as TAG que deverão ser executadas nos testes
+				 - Como se trata de um projeto de automação de testes em BDD(cucumber), temos como premissa as configurações de execuções das funcionalidade.
 
  ## ATENÇÃO ##
 
