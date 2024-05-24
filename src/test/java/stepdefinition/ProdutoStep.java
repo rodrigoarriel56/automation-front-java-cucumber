@@ -22,11 +22,11 @@ public class ProdutoStep {
     private LoginPage loginPage = new LoginPage(Hooks.driver);
     private ProdutoPage addProduto = new ProdutoPage(Hooks.driver);
  
-    @Dado("^preencho os campos para logar$")
-    public void preencho_os_campos_para_logar(DataTable userCredentials) throws Throwable {
-        List<List<String>> data = userCredentials.raw();
-        loginPage.setFieldPassword(data.get(0).get(1));
-    }
+//    @Dado("^preencho os campos para logar$")
+//    public void preencho_os_campos_para_logar(DataTable userCredentials) throws Throwable {
+//        List<List<String>> data = userCredentials.raw();
+//        loginPage.setFieldPassword(data.get(0).get(1));
+//    }
 
     @Quando("^clico no produto desejado$")
     public void clico_no_produto_desejado() throws Throwable {
